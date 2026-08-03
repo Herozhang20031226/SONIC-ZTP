@@ -33,6 +33,7 @@ brew install dnsmasq
 2. Console into the switch.
 On the Mac go to settings, and then network.
 ![Network settings on macOS](images/1.png)
+
 Click on this and statically configure the IP address to 192.168.77.1
 ![Static IP configuration on macOS](images/2.png)
 
