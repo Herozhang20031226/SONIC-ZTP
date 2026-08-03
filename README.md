@@ -36,8 +36,9 @@ On the Mac go to settings, and then network.
   <img src="images/1.png" alt="macOS Network settings" width="600">
 </p>
 Click on this and statically configure the IP address to 192.168.77.1
-![Static IP configuration on macOS](images/2.png)
-
+<p align="center">
+  <img src="images/2.png" alt="macOS Network settings" width="600">
+</p>
 
 
 
