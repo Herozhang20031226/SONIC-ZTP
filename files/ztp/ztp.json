@@ -1,0 +1,26 @@
+{
+  "ztp": {
+    "001-firmware": {
+      "install": {
+        "url": "http://192.168.77.1:8000/ztp/firmware/Enterprise_SONiC_OS_4.5.1_Lite.bin",
+        "set-default": true
+      },
+      "reboot-on-success": true
+    },
+    "002-configdb-json": {
+      "url": {
+        "source": "http://192.168.77.1:8000/ztp/config/config_db.json",
+        "destination": "/etc/sonic/config_db.json",
+        "secure": false
+      },
+      "clear-config": false,
+      "save-config": true
+    },
+    "003-provisioning-script": {
+      "plugin": {
+        "url": "http://192.168.77.1:8000/ztp/scripts/post_ztp.sh"
+      },
+      "reboot-on-success": false
+    }
+  }
+}
