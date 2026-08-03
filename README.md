@@ -35,11 +35,21 @@ On the Mac go to settings, and then network.
 <p align="center">
   <img src="images/1.png" alt="macOS Network settings" width="600">
 </p>
-Click on this and statically configure the IP address to 192.168.77.1
+Click on this and statically configure the IP address to 192.168.77.1, subnet mask to 255.255.255.0
 <p align="center">
   <img src="images/2.png" alt="macOS Network settings" width="600">
 </p>
 
+To check which port on the Mac is connected to the switch. 
+```bash
+networksetup -listallhardwareports
+```
+In this case, it is port 5. 
+```
+Hardware Port: USB 10/100/1000 LAN
+Device: en5
+Ethernet Address: 00:e0:4c:68:03:e0
+```
 
 
 
