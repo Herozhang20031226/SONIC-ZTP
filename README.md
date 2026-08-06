@@ -51,6 +51,11 @@ Device: en5
 Ethernet Address: 00:e0:4c:68:03:e0
 ```
 
+From the switch console, check the version of the firmware. 
+```
+show version
+```
+
 
 
 
