@@ -90,7 +90,20 @@ sudo ztp enable
 sudo ztp run -y
 ```
 
-## results
+## Getting the conf_db from the switch
+Once the switch gets the IP address from our laptop, we could extract the conf_db file from the switch. 
+To test if the switch got the IP address, from the switch console ping the laptop. 
+```
+ping 192.168.77.1
+```
+To get the conf_db from the switch. 
+```
+scp admin@192.168.77.143:/home/admin/config_db-ztp.json \ /Users/Shared/ztp-lab/files/config_db.json
+```
+
+When we get the config file, we can navigate to hostname and change the hostname to something else. By doing so, we could test if the switch get this file successfully and if the configuration actually worked in this switch. We could simply check the hostname before and after the ZTP. 
+
+## Results
 If the DHCP worked, then in the terminal you should get something like:
 ```
 dnsmasq: started, version 2.93 DNS disabled
