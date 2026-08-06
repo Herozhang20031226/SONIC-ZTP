@@ -128,8 +128,26 @@ Serving HTTP on 192.168.77.1 port 8000 (http://192.168.77.1:8000/) ...
 ```
 This means the switch was able to get the json, script, firmware, and the config_db. 
 
+If the switch successfully downloaded the firmware it should show:
+```
+Aug 07 05:11:59.645088+00:00 2026 sonic INFO sonic-ztp[3674377]: firmware: Version SONiC-OS-4.5.3-Lite successfully installed.
+Aug 07 05:11:59.645243+00:00 2026 sonic INFO sonic-ztp[3674377]: firmware: Post image installation device reboot.
+Aug 07 05:11:59.645317+00:00 2026 sonic INFO sonic-ztp[3674377]: firmware: Skipped switch reboot as requested.
+Aug 07 05:11:59.692852+00:00 2026 sonic INFO sonic-ztp[3659221]: Processed Configuration section 001-firmware with result SUCCESS, exit code (0) at 2026-08-07 05:11:59 UTC.
+```
 
+```
+Aug 07 05:17:40.458098+00:00 2026 sonic INFO sonic-ztp[15676]: configdb-json: Downloading config_db.json file from 'http://192.168.77.1:8000/ztp/config/config_db.json'.
+Aug 07 05:20:39.052315+00:00 2026 ztp-test INFO sonic-ztp[4664]: Processed Configuration section 002-configdb-json with result SUCCESS, exit code (0) at 2026-08-07 05:20:39 UTC.
+Aug 07 05:20:39.053771+00:00 2026 ztp-test INFO sonic-ztp[4664]: Processing configuration section 003-provisioning-script at 2026-08-07 05:20:39 UTC.
+Aug 07 05:21:07.034200+00:00 2026 ztp-test INFO sonic-ztp[4664]: Processed Configuration section 003-provisioning-script with result SUCCESS, exit code (0) at 2026-08-07 05:21:07 UTC.
+```
 
+```
+Aug 07 05:21:07.034759+00:00 2026 ztp-test INFO sonic-ztp[4664]: Checking configuration section 001-firmware result: SUCCESS, ignore-result: False.
+Aug 07 05:21:07.034930+00:00 2026 ztp-test INFO sonic-ztp[4664]: Checking configuration section 002-configdb-json result: SUCCESS, ignore-result: False.
+Aug 07 05:21:07.035083+00:00 2026 ztp-test INFO sonic-ztp[4664]: Checking configuration section 003-provisioning-script result: SUCCESS, ignore-result: False.
+Aug 07 05:21:07.036733+00:00 2026 ztp-test INFO sonic-ztp[4664]: ZTP successfully completed at 2026-08-07 05:21:07 UTC.
+```
 
-
-
+## Verification
